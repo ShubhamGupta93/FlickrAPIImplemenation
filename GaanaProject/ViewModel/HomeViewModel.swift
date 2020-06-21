@@ -46,6 +46,9 @@ class HomeViewModel {
                         if paging.currentPage == 1 {
                             // Reset last data if we are going to load first page
                             self.clearDataAndTable()
+                            if totalPages == 0 {
+                                UtilityManager.shared.showToast(message: Constants.noDataFound)
+                            }
                         }
                         self.delegate?.reloadImageTable(paging: paging, flickrPhotoList: photosResponse?.photo ?? [])
 

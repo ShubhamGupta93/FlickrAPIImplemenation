@@ -15,4 +15,6 @@ struct Constants {
     static let navigationTitle = "Image Search"
     static let genericError = "Something went wrong"
     static let networkError = "No Network Connection"
+    static let noDataFound = "No Data Found"
+    static let searchHere = "Search Here"
 }

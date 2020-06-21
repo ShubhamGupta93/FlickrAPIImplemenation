@@ -20,7 +20,7 @@ class CustomSearchBar: UISearchBar {
         self.textField.layer.cornerRadius = 10.0
         self.textField.tintColor = UIColor.white
         self.textField.textColor = UIColor.white
-        
+        self.textField.placeholder = Constants.searchHere
     }
     
     func startAnimating () {
