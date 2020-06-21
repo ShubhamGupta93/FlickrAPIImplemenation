@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="GaanaProject" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="9v0-vU-3dV" id="kue-sX-mQ0"/>
+                <outlet property="searchBar" destination="LG3-aW-6oz" id="3wk-Em-sQh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo5-tV-rmc">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="LG3-aW-6oz" customClass="CustomSearchBar" customModule="GaanaProject" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="346" height="56"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="QBl-Kv-wpx"/>
+                            </connections>
+                        </searchBar>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah0-WK-sSy">
+                            <rect key="frame" x="346" y="13" width="68" height="30"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="Search"/>
+                            <connections>
+                                <action selector="searchButtonAction:" destination="-1" eventType="touchUpInside" id="7ql-vY-nBO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="LG3-aW-6oz" firstAttribute="top" secondItem="uo5-tV-rmc" secondAttribute="top" id="0hf-2R-Fub"/>
+                        <constraint firstItem="LG3-aW-6oz" firstAttribute="leading" secondItem="uo5-tV-rmc" secondAttribute="leading" id="4GN-aI-j8D"/>
+                        <constraint firstAttribute="height" constant="56" id="6f9-a0-NHS"/>
+                        <constraint firstAttribute="bottom" secondItem="LG3-aW-6oz" secondAttribute="bottom" id="9Tp-jg-Ru2"/>
+                        <constraint firstItem="Ah0-WK-sSy" firstAttribute="centerY" secondItem="LG3-aW-6oz" secondAttribute="centerY" id="TXn-v6-7KN"/>
+                        <constraint firstAttribute="trailing" secondItem="Ah0-WK-sSy" secondAttribute="trailing" id="Tg2-Bw-swD"/>
+                        <constraint firstItem="Ah0-WK-sSy" firstAttribute="height" secondItem="LG3-aW-6oz" secondAttribute="height" multiplier="0.535714" id="bzL-Op-EUe"/>
+                        <constraint firstItem="Ah0-WK-sSy" firstAttribute="leading" secondItem="LG3-aW-6oz" secondAttribute="trailing" id="sK0-oG-UQf"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="9v0-vU-3dV">
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="uGG-on-QFe">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="AjV-q3-A2V"/>
+                        <outlet property="delegate" destination="-1" id="aCO-Cl-qka"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="9v0-vU-3dV" secondAttribute="bottom" id="DaZ-T9-gsZ"/>
+                <constraint firstItem="9v0-vU-3dV" firstAttribute="top" secondItem="uo5-tV-rmc" secondAttribute="bottom" id="HAW-AP-M1g"/>
+                <constraint firstItem="9v0-vU-3dV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ibO-Qs-30X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="uo5-tV-rmc" secondAttribute="leading" id="mX2-bZ-JDZ"/>
+                <constraint firstItem="uo5-tV-rmc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="otI-Tc-fHN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9v0-vU-3dV" secondAttribute="trailing" id="yWw-mq-3nt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="uo5-tV-rmc" secondAttribute="top" id="ziX-a4-gch"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </view>
+    </objects>
+</document>
