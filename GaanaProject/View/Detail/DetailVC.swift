@@ -60,7 +60,7 @@ class DetailVC: UIViewController {
      
      
      private func animation() {
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIView.AnimationOptions.allowUserInteraction, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: UIView.AnimationOptions.curveEaseOut, animations: {
              self.imageView.frame = self.imageViewFrame
 
          }) { (sucess) in

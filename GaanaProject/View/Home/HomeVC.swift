@@ -133,16 +133,7 @@ extension HomeVC:UICollectionViewDelegate,UICollectionViewDataSource{
         let detailView = DetailVC()
         detailView.photo = searchResult.flickrPhotoList[indexPath.item]
         detailView.initialRect = rectOfCellInSuperview
-        
-        
-        let transition = CATransition()
-        transition.duration = 0.5
-        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        transition.type = CATransitionType.fade
-        self.navigationController?.view.layer.add(transition, forKey: nil)
- 
-       _ =  self.navigationController?.pushViewController(detailView, animated: false)
-        
+        self.navigationController?.pushViewController(detailView, animated: false)
         
     }
     
